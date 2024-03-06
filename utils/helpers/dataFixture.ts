@@ -1,6 +1,6 @@
 export const credentials ={
-    email: 'ze.basszender@gmail.com',
-    password: 'Arioncito1102'
+    email: 'newmail@gmail.com',
+    password: 'test123'
 }
 
 export const url={
