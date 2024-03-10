@@ -1,5 +1,6 @@
 export const LoginLocators= {
     emailInput: '[id="email"]',
     passwordInput: '[id="password"]',
-    submitButton: '[id="submit"]'
+    submitButton: '[id="submit"]',
+    loginErrorMessage: 'span[id="error"]'
 }

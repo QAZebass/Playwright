@@ -1,6 +1,7 @@
 export const credentials ={
     email: 'newmail@gmail.com',
-    password: 'test123.'
+    password: 'test123.',
+    invalidPassword: 'test123'
 }
 
 export const url={
@@ -9,4 +10,8 @@ export const url={
 
 export const contactList ={
     contactListTitle: 'Contact List'
+}
+
+export const errorMessage ={
+    loginUnsuccessful: 'Incorrect username or password'
 }

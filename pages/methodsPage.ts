@@ -20,4 +20,5 @@ export class MethodsPage{
     async assertText(text1: string, text2: string){
         expect(text1).toEqual(text2)
     }
+    
 }

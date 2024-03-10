@@ -11,7 +11,7 @@ export class ContactListPage extends MethodsPage {
         this.contactListTitle= page.locator(ContactListLocator.contactListTitle)
     }
 
-    async titleAssetion(title: string){
+    async titleAssertion(title: string){
         const textTitle= await this.page.locator(ContactListLocator.contactListTitle).textContent()
         await this.assertText(textTitle, title)
     }
