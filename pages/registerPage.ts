@@ -12,9 +12,9 @@ export class RegisterPage extends MethodsPage {
     }
 
     async assertSignUpText(expectedTitle: string){
-        await this.page.locator(registerLocator.signUpTitle).waitFor({timeout: 1000})
-        const title= this.page.locator(registerLocator.signUpTitle)
-        const expected= title.textContent()
+        await this.page.locator(registerLocator.registerTitle).waitFor({timeout: 1000})
+        const title= this.page.locator(registerLocator.registerTitle)
+        const expected= await title.textContent()
         console.log(expected)
         await this.assertText(expected, expectedTitle)
     }
