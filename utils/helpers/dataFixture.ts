@@ -8,8 +8,11 @@ export const url={
     internxt: 'https://drive.internxt.com/'
 }
 
-export const contactList ={
-    contactListTitle: 'Contact List'
+export const titles ={
+    contactListTitle: 'Contact List',
+
+    signUpTitle: 'Not yet a user? Click here to sign up!',
+    registerTitle: 'Sign up to begin adding your contacts!'
 }
 
 export const errorMessage ={
