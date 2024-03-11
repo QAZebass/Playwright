@@ -53,7 +53,12 @@ module.exports = defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
+    {
+      name: 'latest-test',
+      testDir: 'tests',
+      testMatch: /.[SIGN-UP].spec.ts/,
 
+    },
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',

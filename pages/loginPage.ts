@@ -8,6 +8,7 @@ export class LoginPage extends MethodsPage {
     private passwordInput: Locator;
     private submitButton: Locator;
     private loginErrorMessage: Locator;
+    private signUpTitle: Locator;
 
     construtor(page: Page){
         
@@ -15,6 +16,7 @@ export class LoginPage extends MethodsPage {
         this.passwordInput= page.locator(LoginLocators.passwordInput)
         this.submitButton= page.locator(LoginLocators.submitButton)
         this.loginErrorMessage= page.locator(LoginLocators.loginErrorMessage)
+        this.signUpTitle = page.locator(LoginLocators.signUpTitle)
     }
 
     async typeEmail(email:string){
@@ -31,5 +33,9 @@ export class LoginPage extends MethodsPage {
         const errorText = await this.page.locator(LoginLocators.loginErrorMessage).textContent()
         await this.assertText(errorText, expectedText)
     }
-    
+    async assertTitle(expectedTitle: string){
+        await this.page.getByText('Not yet a user? Click here to sign up!').waitFor({timeout: 1000})
+        const registerTitle = await this.page.getByText('Not yet a user? Click here to sign up!').textContent()
+        await this.assertText(registerTitle, expectedTitle)
+    }
 }
