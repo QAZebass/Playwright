@@ -4,19 +4,22 @@ import { LoginLocators } from "./Locators/login"
 
 export class LoginPage extends MethodsPage {
 
-    private emailInput: Locator;
-    private passwordInput: Locator;
-    private submitButton: Locator;
-    private loginErrorMessage: Locator;
-    private signUpTitle: Locator;
+    private readonly emailInput: Locator;
+    private readonly passwordInput: Locator;
+    private readonly submitButton: Locator;
+    private readonly loginErrorMessage: Locator;
+    private readonly signUpTitle: Locator;
+    private readonly signupButton: Locator;
 
-    construtor(page: Page){
+    constructor(page: Page){
         
+        super(page);
         this.emailInput= page.locator(LoginLocators.emailInput)
         this.passwordInput= page.locator(LoginLocators.passwordInput)
         this.submitButton= page.locator(LoginLocators.submitButton)
         this.loginErrorMessage= page.locator(LoginLocators.loginErrorMessage)
         this.signUpTitle = page.locator(LoginLocators.signUpTitle)
+        this.signupButton= page.locator(LoginLocators.signupButton)
     }
 
     async typeEmail(email:string){
@@ -38,4 +41,12 @@ export class LoginPage extends MethodsPage {
         const registerTitle = await this.page.getByText('Not yet a user? Click here to sign up!').textContent()
         await this.assertText(registerTitle, expectedTitle)
     }
+    async clickOnSignUp(){
+        const button= this.page.locator(LoginLocators.signupButton)
+        await button.waitFor({state:'visible'})
+        const buttonText= await button.textContent()
+        expect(buttonText).toContain('Sign up')
+        await this.clickOn(LoginLocators.signupButton)
+    }
+   
 }

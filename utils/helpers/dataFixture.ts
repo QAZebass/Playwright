@@ -10,7 +10,9 @@ export const url={
 
 export const titles ={
     contactListTitle: 'Contact List',
-    signUpTitle: 'Not yet a user? Click here to sign up!'
+
+    signUpTitle: 'Not yet a user? Click here to sign up!',
+    registerTitle: 'Sign up to begin adding your contacts!'
 }
 
 export const errorMessage ={

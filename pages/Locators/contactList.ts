@@ -1,3 +1,4 @@
 export const ContactListLocator ={
-    contactListTitle : 'header h1'
+    contactListTitle : 'header h1',
+   
 }

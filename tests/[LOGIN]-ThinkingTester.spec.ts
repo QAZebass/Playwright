@@ -11,7 +11,7 @@ test.describe('LOGIN - Thinking Tester', async ()=>{
     const contactListText = titles.contactListTitle
     const loginError = errorMessage.loginUnsuccessful
     
-    test('TC1: Validate that the user can login successfully', async ({page, baseURL}) => {
+    test.only('TC1: Validate that the user can login successfully', async ({page, baseURL}) => {
         
         const loginPage = new LoginPage(page) 
         const contacListPage = new ContactListPage(page)

@@ -3,5 +3,6 @@ export const LoginLocators= {
     passwordInput: '[id="password"]',
     submitButton: '[id="submit"]',
     loginErrorMessage: 'span[id="error"]',
-    signUpTitle: 'paragraph'
+    signUpTitle: 'paragraph',
+    signupButton: '[id="signup"]'
 }

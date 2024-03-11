@@ -1,4 +1,4 @@
-import { Page, expect } from '@playwright/test'
+import { Page, expect, Locator} from '@playwright/test'
 
 export class MethodsPage{
 
@@ -14,11 +14,11 @@ export class MethodsPage{
     async typeIn(selector: string, content: string){
         await this.page.locator(selector).fill(content)
     }
-    async clickOn(selector: string){
+    async clickOn(selector:string){
         await this.page.locator(selector).click()
     }
-    async assertText(text1: string, text2: string){
-        expect(text1).toEqual(text2)
+    async assertText(actualText: string, expectedText: string){
+        expect(actualText).toEqual(expectedText)
     }
     
 }
