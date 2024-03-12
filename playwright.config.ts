@@ -1,3 +1,5 @@
+import { PlaywrightTestConfig } from "playwright/test";
+
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
 
@@ -5,8 +7,20 @@ const { defineConfig, devices } = require('@playwright/test');
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// require('dotenv').config();
+require('dotenv').config();
 
+const config: PlaywrightTestConfig={
+  use:{
+    headless: true,
+    channel: "chrome",
+    screenshot: "off",
+    video: "off"
+  },
+  testMatch: ["[SIGN-UP]-ThinkingTester.spec.ts"],
+  retries:0,
+
+}
+export default config;
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
