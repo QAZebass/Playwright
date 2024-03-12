@@ -1,6 +1,6 @@
 import { test } from '@playwright/test'
 import { LoginPage } from '../pages/loginPage';
-import { RegisterPage } from '../pages/RegisterPage';
+import { RegisterPage } from '../pages/registerPage';
 import { MethodsPage } from '../pages/methodsPage';
 import { titles } from '../utils/helpers/dataFixture';
 
