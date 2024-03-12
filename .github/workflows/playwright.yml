@@ -1,16 +1,16 @@
 name: Playwright Tests
 on:
   push:
-    branches: [ main, master ]
+    branches: [ playwright-practice, thinking-tester ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ playwright-practice, thinking-tester ]
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v4.1.1
+    - uses: actions/setup-node@v4.0.2
       with:
         node-version: 18
     - name: Install dependencies
