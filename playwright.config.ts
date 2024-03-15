@@ -14,8 +14,10 @@ const config: PlaywrightTestConfig={
     headless: true,
     channel: "chrome",
     screenshot: "off",
-    video: "off"
+    video: "off",
+    storageState: "storageState.json"
   },
+  globalSetup: "./global-setup",
   testMatch: ["[SIGN-UP]-ThinkingTester.spec.ts"],
   retries:0,
 

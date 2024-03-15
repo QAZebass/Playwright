@@ -23,4 +23,5 @@ test.describe('Sign Up', async ()=>{
         await registerPage.typeInFirstName('Sebastian')
 
     })
+    
 })
