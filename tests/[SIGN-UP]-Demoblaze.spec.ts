@@ -1,9 +1,7 @@
 import { test } from '@playwright/test'
-import faker from '@faker-js/faker'
 import { LoginPage } from '../pages/loginPage';
-import { RegisterPage } from '../pages/registerPage';
 import { MethodsPage } from '../pages/methodsPage';
-import { titles } from '../utils/helpers/dataFixture';
+
 
 
 
