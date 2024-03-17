@@ -1,5 +1,5 @@
 export const credentials ={
-    email: 'newmail@gmail.com',
+    username: 'Zebax',
     password: 'test123.',
     invalidPassword: 'test123'
 }
