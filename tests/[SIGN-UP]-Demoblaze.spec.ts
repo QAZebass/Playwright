@@ -1,24 +1,18 @@
 import { test } from '@playwright/test'
-import { LoginPage } from '../pages/loginPage';
-import { MethodsPage } from '../pages/methodsPage';
-
-
-
+import { HomePage } from '../pages/homePage'
+import { credentials } from '../utils/helpers/dataFixture'
 
 test.describe('Sign Up', async ()=>{
 
     test('TC1: Validate that the user can register a new account', async ({page, baseURL})=>{
-        const signUpTitle = titles.signUpTitle
-        const registerTitle= titles.registerTitle
-        const loginPage = new LoginPage(page)
-        const registerPage = new RegisterPage(page)
-        
+        const username= credentials.username
+        const password= credentials.password
+    
+        const homepage = new HomePage(page)
 
-        await page.goto(`${baseURL}`)
-        await loginPage.assertTitle(signUpTitle)
-        await loginPage.clickOnSignUp()
-        await registerPage.assertSignUpText(registerTitle)
-        await registerPage.typeInFirstName('Sebastian')
+        await homepage.loadWeb('/')
+        await homepage.clickOnLogIn()
+        await page.waitForTimeout(2000)
 
     })
     
