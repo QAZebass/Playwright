@@ -1,8 +1,9 @@
-export const registerLocator={
-    registerTitle: 'div:nth-child(1) > p:first-of-type',
-    firstNameInput: '[id="firstName"]',
-    lastNameInput: '[id="lastName"]',
-    passwordInput: '[id="password"]',
-    submitButton: '[id="submit"]',
-    cancelButton: '[id="cancel"]'
+export const loginLocator={
+    usernameTitle: '[for="log-name"]',
+    usernameInput: '[id="loginusername"]',
+    passwordTitle: 'label[for="log-pass"]',
+    passwordInput: '[id="loginpassword"]',
+    footerWrapper: '[class="modal-footer"]',
+    closeButton: 'button[type="button"]',
+    logInButton: 'button[type="button"]:has-text("Log in")'
 }

@@ -1,5 +1,6 @@
 import { test } from '@playwright/test'
 import { HomePage } from '../pages/homePage'
+import { LoginPage } from '../pages/loginPage'
 import { credentials } from '../utils/helpers/dataFixture'
 
 test.describe('Sign Up', async ()=>{
@@ -9,11 +10,13 @@ test.describe('Sign Up', async ()=>{
         const password= credentials.password
     
         const homepage = new HomePage(page)
+        const loginpage = new LoginPage(page)
 
         await homepage.loadWeb('/')
         await homepage.clickOnLogIn()
-        await page.waitForTimeout(2000)
-
+        await loginpage.typeInUsername(username)
+        await loginpage.typeInPassword(password)
+        await loginpage.clickLogIn()
     })
     
 })

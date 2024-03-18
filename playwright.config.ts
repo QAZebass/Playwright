@@ -18,7 +18,7 @@ const config: PlaywrightTestConfig={
     storageState: "storageState.json"
   },
   globalSetup: "./global-setup",
-  testMatch: ["[SIGN-UP]-ThinkingTester.spec.ts"],
+  testMatch: ["[SIGN-UP]-Demoblaze.spec.ts"],
   retries:0,
 
 }
