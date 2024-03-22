@@ -3,9 +3,9 @@ import { HomePage } from '../pages/homePage'
 import { LoginPage } from '../pages/loginPage'
 import { credentials } from '../utils/helpers/dataFixture'
 
-test.describe('Sign Up', async ()=>{
+test.describe('Log into Demoblaze', async ()=>{
 
-    test('TC1: Validate that the user can register a new account', async ({page, baseURL})=>{
+    test('TC1: Validate that the user can login', async ({page, baseURL})=>{
         const username= credentials.username
         const password= credentials.password
     
