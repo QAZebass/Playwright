@@ -20,7 +20,7 @@ export class LoginPage extends basePage{
         this.passwordTitle= page.locator(loginLocator.passwordTitle)
         this.passwordInput= page.locator(loginLocator.passwordInput)
         this.closeButton= page.locator(loginLocator.closeButton)
-        this.logInButton= page.getByText("Log in")
+        this.logInButton= page.locator(loginLocator.logInButton)
         this.footerWrapper = page.locator(loginLocator.footerWrapper)
     }
 
@@ -34,12 +34,14 @@ export class LoginPage extends basePage{
         const passwordTitle = await this.passwordTitle.first().textContent()
         expect(passwordTitle).toEqual('Password:')
         await this.typeIn(loginLocator.passwordInput, password)
+        await this.page.waitForTimeout(1000)
     }
 
     async clickLogIn(){
         
         await this.logInButton.waitFor({state: 'visible', timeout: 3000})
         this.clickOn(loginLocator.logInButton)
+        //await page.waitForTimeout(2000)
     }
     
 }

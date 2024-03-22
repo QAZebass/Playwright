@@ -5,5 +5,5 @@ export const loginLocator={
     passwordInput: '[id="loginpassword"]',
     footerWrapper: '[class="modal-footer"]',
     closeButton: 'button[type="button"]',
-    logInButton: 'button[type="button"]:has-text("Log in")'
+    logInButton: 'button[class="btn btn-primary"]:has-text("Log in")'         
 }

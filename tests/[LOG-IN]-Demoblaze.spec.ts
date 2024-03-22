@@ -17,6 +17,8 @@ test.describe('Sign Up', async ()=>{
         await loginpage.typeInUsername(username)
         await loginpage.typeInPassword(password)
         await loginpage.clickLogIn()
+        await homepage.logInAssertion(username)
+        
     })
     
 })
