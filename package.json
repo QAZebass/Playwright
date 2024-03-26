@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test --ui tests/\\[SIGN-UP\\]-Demoblaze.spec.ts --config=playwright.config.ts --project=chromium"
+    "test": "playwright test --ui tests/\\[BUY\\]-Validate-the-user-can-buy-one-or-more-devices.spec.ts --config=playwright.config.ts --project=chromium"
   },
   "keywords": [],
   "author": "",

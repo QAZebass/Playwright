@@ -1,7 +1,7 @@
 import { test } from '@playwright/test'
-import { HomePage } from '../pages/homePage'
-import { LoginPage } from '../pages/loginPage'
-import { credentials } from '../utils/helpers/dataFixture'
+import { HomePage } from '../../pages/homePage'
+import { LoginPage } from '../../pages/loginPage'
+import { credentials } from '../../utils/helpers/dataFixture'
 
 test.describe('Log into Demoblaze', async ()=>{
 

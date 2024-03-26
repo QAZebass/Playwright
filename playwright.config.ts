@@ -18,7 +18,7 @@ const config: PlaywrightTestConfig={
     storageState: "storageState.json"
   },
   globalSetup: "./global-setup",
-  testMatch: ["[SIGN-UP]-Demoblaze.spec.ts"],
+  testMatch: ["[BUY]"],
   retries:0,
 
 }
@@ -51,14 +51,14 @@ module.exports = defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    //{ name: 'setup', testMatch: /.*\.setup\.ts/ },
+    { name: 'setup', testMatch: /.*\.setup\.ts/ },
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-      //storageState: 'playwright/.auth/user.json'
+      use: { ...devices['Desktop Chrome'],
+      storageState: 'playwright/.auth/user.json',
       },
-      //dependencies: ['setup']
-    //},
+      dependencies: ['setup']
+    },
 
     {
       name: 'firefox',
